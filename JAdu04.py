@@ -20,3 +20,16 @@ monthOfBirth_int = int(monthOfBirth)
 dayOfBirth = RC[4:6]
 dayOfBirth_int = int(dayOfBirth)
 print("den:", dayOfBirth_int)
+
+######################### ALTERNATIVNE #############################
+def monthOfBirth(rc):
+  mesic = int(rc[2:4])
+  if  mesic > 50:
+      MoB = mesic - 50
+  else:
+     MoB = mesic
+
+  return MoB
+
+print(monthOfBirth('9207054439'))
+print(monthOfBirth('9555125899'))
