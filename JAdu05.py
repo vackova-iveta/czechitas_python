@@ -22,4 +22,23 @@ else:
   print(f"Bohužel jsi nesplnil/a podmínky soutěže.")
 
 
-  # CAST 2 - PODMINKY
+  # CAST 2 - OBJEKTY A TŘÍDY - Vlastní zadání na téma Třídy a Objekty
+    
+class Vuz:
+    def __init__(self, znacka, najezd, rokVyroby, kapacita):
+        self.znacka = znacka
+        self.najezd = najezd
+        self.rokVyroby = rokVyroby
+        self.kapacita = kapacita
+
+    def __str__(self):
+        return f"znacka: {self.znacka}, najezd: {self.najezd}, kapacita: {self.kapacita}"
+
+    def denni_sazba_pronajem(self):
+        return self.kapacita * 100
+
+autobus = Vuz("Volvo", 120000, 2008, 50)
+golfovy_vozik = Vuz("Skoda", 2000, 2010, 2)
+
+print(" Pronájem vozu na jeden den činí:", autobus.denni_sazba_pronajem())
+print(" Pronájem vozu na jeden den činí:", golfovy_vozik.denni_sazba_pronajem())
